@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vodafone Cash Payment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <section class="payment-section">
+        <h2>Complete Your Payment</h2>
+
+        <!-- Transfer Number -->
+        <div class="transfer-number">
+            <p>Please transfer the money to this number:</p>
+            <p class="transfer-phone-number">01070817647</p> <!-- Transfer number here -->
+        </div>
+        
+        <!-- Display only package price -->
+        <div class="price-display">
+            <p id="selected-package-price"></p>
+        </div>
+        
+        <!-- Payment Form -->
+        <form id="payment-form">
+            <label for="phone">The number from which the money was transferred</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your Vodafone Cash number" required>
+        
+            <label for="player-id">Player ID</label>
+            <input type="text" id="player-id" name="player-id" placeholder="Enter your Player ID" required>
+        
+            <label for="screenshot">Upload Transaction Screenshot:</label>
+            <input type="file" id="screenshot" name="screenshot" accept="image/*" required>
+        
+            <button type="submit" class="pay-button">Submit Payment</button>
+        </form>
+    </section>
+
+    <!-- Order Confirmation Modal -->
+    <div id="confirmation-modal" class="modal">
+        <div class="modal-content">
+            <h2>Order Confirmed!</h2>
+            <p>Your UC will be delivered to your account within minutes. Thank you for trusting us!</p>
+            <button onclick="closeConfirmation()">Okay</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
